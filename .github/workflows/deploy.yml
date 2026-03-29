@@ -1,0 +1,28 @@
+name: Deploy Theme to Hostinger
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: 46.202.158.241
+          port: 21
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./themes/twentytwentyfive/
+          server-dir: public_html/wp-content/themes/twentytwentyfive/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/package-lock.json
