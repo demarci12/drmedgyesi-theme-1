@@ -20,7 +20,7 @@ jobs:
           username: u499412551.silver-gull-152491.hostingersite.com
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./themes/twentytwentyfive/
-          server-dir: public_html/wp-content/themes/twentytwentyfive/
+          server-dir: wp-content/themes/twentytwentyfive/
           exclude: |
             **/.git*
             **/.git*/**
