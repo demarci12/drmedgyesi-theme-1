@@ -14,34 +14,44 @@
 					"slug": "base"
 				},
 				{
-					"color": "#111111",
+					"color": "#111827",
 					"name": "Contrast",
 					"slug": "contrast"
 				},
 				{
-					"color": "#FFEE58",
-					"name": "Accent 1",
-					"slug": "accent-1"
+					"color": "#b1976d",
+					"name": "Primary Gold",
+					"slug": "primary"
 				},
 				{
-					"color": "#F6CFF4",
-					"name": "Accent 2",
-					"slug": "accent-2"
+					"color": "#9a835c",
+					"name": "Primary Gold Dark",
+					"slug": "primary-dark"
 				},
 				{
-					"color": "#503AA8",
-					"name": "Accent 3",
-					"slug": "accent-3"
+					"color": "#fdfbf8",
+					"name": "Warm White",
+					"slug": "warm-white"
 				},
 				{
-					"color": "#686868",
-					"name": "Accent 4",
-					"slug": "accent-4"
+					"color": "#f4f0ea",
+					"name": "Warm Light",
+					"slug": "warm-light"
 				},
 				{
-					"color": "#FBFAF3",
-					"name": "Accent 5",
-					"slug": "accent-5"
+					"color": "#e8e0d4",
+					"name": "Warm Border",
+					"slug": "warm-border"
+				},
+				{
+					"color": "#6b7280",
+					"name": "Gray Medium",
+					"slug": "gray-medium"
+				},
+				{
+					"color": "#0f172a",
+					"name": "Dark",
+					"slug": "dark"
 				},
 				{
 					"color": "color-mix(in srgb, currentColor 20%, transparent)",
@@ -152,6 +162,16 @@
 			],
 			"fontFamilies": [
 				{
+					"name": "Inter",
+					"slug": "inter",
+					"fontFamily": "Inter, sans-serif"
+				},
+				{
+					"name": "Lora",
+					"slug": "lora",
+					"fontFamily": "Lora, Georgia, serif"
+				},
+				{
 					"name": "Manrope",
 					"slug": "manrope",
 					"fontFamily": "Manrope, sans-serif",
@@ -198,7 +218,7 @@
 			}
 		},
 		"typography": {
-			"fontFamily": "var:preset|font-family|manrope",
+			"fontFamily": "var:preset|font-family|inter",
 			"fontSize": "var:preset|font-size|large",
 			"fontWeight": "300",
 			"letterSpacing": "-0.1px",
@@ -596,18 +616,21 @@
 		"elements": {
 			"button": {
 				"color": {
-					"background": "var:preset|color|contrast",
+					"background": "var:preset|color|primary",
 					"text": "var:preset|color|base"
+				},
+				"border": {
+					"radius": "10px"
 				},
 				":focus": {
 					"outline": {
-						"color": "var:preset|color|accent-4",
+						"color": "var:preset|color|primary",
 						"offset": "2px"
 					}
 				},
 				":hover": {
 					"color": {
-						"background": "color-mix(in srgb, var(--wp--preset--color--contrast) 85%, transparent)",
+						"background": "var:preset|color|primary-dark",
 						"text": "var:preset|color|base"
 					},
 					"border": {
@@ -668,7 +691,8 @@
 			},
 			"heading": {
 				"typography": {
-					"fontWeight": "400",
+					"fontFamily": "var:preset|font-family|lora",
+					"fontWeight": "700",
 					"lineHeight": "1.125",
 					"letterSpacing": "-0.1px"
 				}
@@ -728,6 +752,11 @@
 			"name": "page-no-title",
 			"postTypes": ["page"],
 			"title": "Page No Title"
+		},
+		{
+			"name": "front-page",
+			"postTypes": ["page"],
+			"title": "Dr. Medgyesi Landing Page"
 		}
 	]
 }

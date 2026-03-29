@@ -147,6 +147,20 @@ if ( ! function_exists( 'twentytwentyfive_register_block_bindings' ) ) :
 endif;
 add_action( 'init', 'twentytwentyfive_register_block_bindings' );
 
+// Enqueues Google Fonts (Inter + Lora) for Dr. Medgyesi theme.
+if ( ! function_exists( 'drmedgyesi_google_fonts' ) ) :
+	function drmedgyesi_google_fonts() {
+		wp_enqueue_style(
+			'drmedgyesi-google-fonts',
+			'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap',
+			array(),
+			null
+		);
+	}
+endif;
+add_action( 'wp_enqueue_scripts', 'drmedgyesi_google_fonts' );
+add_action( 'enqueue_block_editor_assets', 'drmedgyesi_google_fonts' );
+
 // Registers block binding callback function for the post format name.
 if ( ! function_exists( 'twentytwentyfive_format_binding' ) ) :
 	/**

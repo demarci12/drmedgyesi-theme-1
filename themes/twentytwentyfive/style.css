@@ -74,3 +74,59 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
 :where(pre) {
 	overflow-x: auto;
 }
+
+/* =========================================
+   Dr. Medgyesi Theme Customizations
+   ========================================= */
+
+/* Sticky header with shadow */
+.drm-header {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Smooth scrolling for anchor links */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Navigation link hover color */
+.drm-header .wp-block-navigation a:hover {
+	color: #b1976d !important;
+	text-decoration: none !important;
+}
+
+/* Footer list reset */
+.drm-footer-list {
+	list-style: none;
+	padding-left: 0;
+}
+.drm-footer-list li {
+	margin-bottom: 12px;
+}
+.drm-footer-list a:hover {
+	color: #b1976d !important;
+}
+
+/* Score card hover effect */
+.drm-score-card {
+	transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.drm-score-card:hover {
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+	border-color: rgba(177, 151, 109, 0.3) !important;
+	transform: translateY(-2px);
+}
+
+/* Primary button hover */
+.wp-block-button__link:hover {
+	opacity: 0.9;
+}
+
+/* Scorecard email form styling */
+.drm-scorecard-section input[type="email"]:focus {
+	border-color: #b1976d !important;
+	outline: none;
+}
