@@ -17,7 +17,7 @@ jobs:
         with:
           server: 46.202.158.241
           port: 21
-          username: ${{ secrets.FTP_USERNAME }}
+          username: u499412551.silver-gull-152491.hostingersite.com
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./themes/twentytwentyfive/
           server-dir: public_html/wp-content/themes/twentytwentyfive/
